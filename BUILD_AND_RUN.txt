@@ -1,0 +1,17 @@
+HOW TO BUILD AND RUN (WINDOWS)
+
+1. Download the SQLite amalgamation zip (sqlite-amalgamation-xxxxxx.zip) from:
+   https://sqlite.org/download.html
+   Extract sqlite3.h and sqlite3.c into this exact folder (alongside main.cpp).
+
+2. Open Command Prompt (cmd) in this folder and run:
+
+   g++ -std=c++17 -O2 main.cpp Database.cpp InputValidator.cpp StudentManager.cpp sqlite3.c -I. -o student_system.exe
+
+3. Run the generated executable:
+
+   student_system.exe
+
+Notes:
+- Make sure MinGW / g++ is installed and added to your Windows PATH.
+- On first run, students.db will be created automatically in this folder.
